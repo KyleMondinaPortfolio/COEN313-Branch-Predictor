@@ -21,7 +21,7 @@ with open(sys.argv[1]) as f:
 	for line in lines:
 		progress = progress + 1
 		totalBranches = progress
-		print("parsing in progress: " + str(round(progress/len(lines)*100,2)) + " %")
+		print("parsing in progress: " + str(round(progress/len(lines)*100.0,2)) + " %")
 
 		attributes = line.split(" ")
 		
