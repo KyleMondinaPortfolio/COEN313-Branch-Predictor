@@ -1,6 +1,16 @@
-from bit2Predictor import Bit2Predictor 
+from bit3Predictor import Bit3Predictor 
 
-cookies = Bit2Predictor();
+
+cookies = Bit3Predictor();
+
+print(cookies.predict())
+cookies.taken();
+print(cookies.predict())
+cookies.taken();
+print(cookies.predict())
+cookies.taken();
+print(cookies.predict())
+cookies.taken();
 print(cookies.predict())
 cookies.taken();
 print(cookies.predict())
