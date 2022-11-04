@@ -8,10 +8,14 @@ if (len(sys.argv)<2):
 
 instructions = []
 btaken = 0
+bntaken = 0
+counter = 0
 
 with open(sys.argv[1]) as f:
 	lines = f.readlines()
 	for line in lines:
+		counter = counter + 1	
+		print("parsing progress: " + str(counter/15061011))
 		attributes = line.split(" ")
 		bi_addr = attributes[0]
 		taken = attributes[1]
@@ -19,12 +23,17 @@ with open(sys.argv[1]) as f:
 		instr_name = attributes[3]
 		instructions.append(Instruction(attributes[0],attributes[1],attributes[2],attributes[3]))
 
+counter = 0
+
 for instruction in instructions:
-	print(instruction.taken)
+	counter=counter+1
+	print("insturction classifcation progress" + str(counter/15061011))
 	if (instruction.taken == "T"):
 		btaken = btaken + 1
+	elif(instruction.taken == "N"):
+		bntaken = bntaken + 1
 
-print(btaken)
-
+print("Taken: " + str(btaken))
+print("Not Taken: " + str(bntaken))
 		
 
