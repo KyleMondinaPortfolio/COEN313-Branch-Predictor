@@ -1,4 +1,4 @@
-from bit2predictor import Bit2Predictor 
+from bit2Predictor import Bit2Predictor 
 
 cookies = Bit2Predictor();
 print(cookies.predict())
