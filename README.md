@@ -4,9 +4,9 @@ Final Class Project for Santa Clara University's COEN 313: Advance Computer Arch
 ## Phase 1
 
 given a branch trace text file, program will output: 
-	* number of branches taken
-	* number of branches not taken
-	* number of distinct branches
+1. number of branches taken
+2. number of branches not taken
+3. number of distinct branches
 
 ### Usage
 `py parser.py <branchTrace.txt>`
