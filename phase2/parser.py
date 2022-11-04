@@ -14,13 +14,11 @@ br_addrs = []
 btaken = 0
 bntaken = 0
 progress = 0
-totalBranches = 0
 
 with open(sys.argv[1]) as f:
 	lines = f.readlines()
 	for line in lines:
 		progress = progress + 1
-		totalBranches = progress
 		print("parsing in progress: " + str(round(progress/len(lines),4)) + " %")
 
 		attributes = line.split(" ")
@@ -42,7 +40,6 @@ with open(sys.argv[1]) as f:
 
 distinct_br_addrs = Counter(br_addrs).keys()
 print("-------Parsing Complete-------")
-print("Total Branches: " + str(totalBranches))
 print("Distinct Branch Addresses: " + str(len(distinct_br_addrs)))
 print("Taken: " + str(btaken))
 print("Not Taken: " + str(bntaken))
