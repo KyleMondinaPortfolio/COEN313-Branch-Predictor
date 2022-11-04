@@ -14,6 +14,7 @@ br_addrs = []
 btaken = 0
 bntaken = 0
 progress = 0
+BP = {}
 
 with open(sys.argv[1]) as f:
 	lines = f.readlines()
@@ -25,6 +26,14 @@ with open(sys.argv[1]) as f:
 		
 		bi_addr = attributes[0]
 		br_addrs.append(attributes[0])
+		#check if branch address is in BP dictionary, if not added it and added a 1 bit predictor to it
+		
+		if attributes[0] in BP:
+			print("branch address already identified")
+		else:
+			BP.
+
+			
 
 		taken = attributes[1]
 		if (taken == "T"):
