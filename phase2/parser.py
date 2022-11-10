@@ -110,7 +110,7 @@ with open(sys.argv[1]) as f:
 			BP1[hashed_bi_addr].taken()
 			BP2[hashed_bi_addr].taken()
 			BP3[hashed_bi_addr].taken()
-		elif(taken=="N"):
+		elif (taken == "N"):
 			bntaken = bntaken + 1
 			BPP1[bi_addr].notTaken()
 			BPP2[bi_addr].notTaken()
