@@ -17,6 +17,7 @@ with open(sys.argv[1]) as f:
 		attributes = line.split(" ")
 		
 		is_taken = 0	
+		#Check if the Branch is Taken or Not
 		is_taken_raw = attributes[1]
 		if (is_taken_raw == "T"):
 			#1 Denotes T

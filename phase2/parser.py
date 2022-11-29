@@ -71,12 +71,23 @@ with open(sys.argv[1]) as f:
 			BP3[hashed_bi_addr]=Bit3Predictor()
 		
 
-		taken = attributes[1]
+		
+		is_taken_raw = attributes[1]
+		#conver ->0 or 1
+		#Check if the Branch is Taken or Not
+		is_taken_raw = attributes[1]
+		if (is_taken_raw == "T"):
+			#1 Denotes T
+			is_taken = 1
+		
+
 
 
 		#counting misprediction
 		if (BPP1[bi_addr].predict() != taken):
 			mpp1 = mpp1 + 1
+		#ADD THIS ONE FOR UPDATE:
+		#BPP1[bi_addr].update(actual_value)
 		else:
 			cpp1 = cpp1 +1 
 		if (BPP2[bi_addr].predict() != taken):
