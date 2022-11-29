@@ -1,6 +1,7 @@
 class Bit3Predictor:
 	def __init__(self):
 		self.state = "WN3"
+	
 	def taken(self):
 		if (self.state == "SN"):
 			self.state = "WN1"

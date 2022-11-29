@@ -54,7 +54,6 @@ with open(sys.argv[1]) as f:
 		br_addrs.append(attributes[0])
 
 		#check if branch address is in BP dictionary, if not added it and added a 1 bit predictor to it
-
 		if bi_addr not in BPP1:
 			BPP1[bi_addr]=Bit1Predictor()
 		if bi_addr not in BPP2:
@@ -70,7 +69,6 @@ with open(sys.argv[1]) as f:
 			BP2[hashed_bi_addr]=Bit2Predictor()
 		if hashed_bi_addr not in BP3:
 			BP3[hashed_bi_addr]=Bit3Predictor()
-
 		
 
 		taken = attributes[1]
@@ -89,8 +87,7 @@ with open(sys.argv[1]) as f:
 			mpp3 = mpp3 + 1
 		else:
 			cpp3 = cpp3 +1 
-		
-		#counting misprediction
+
 		if (BP1[hashed_bi_addr].predict() != taken):
 			mp1 = mp1 + 1
 		else:
@@ -113,7 +110,7 @@ with open(sys.argv[1]) as f:
 			BP1[hashed_bi_addr].taken()
 			BP2[hashed_bi_addr].taken()
 			BP3[hashed_bi_addr].taken()
-		elif(taken=="N"):
+		elif (taken == "N"):
 			bntaken = bntaken + 1
 			BPP1[bi_addr].notTaken()
 			BPP2[bi_addr].notTaken()
