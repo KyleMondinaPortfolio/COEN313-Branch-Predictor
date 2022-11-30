@@ -33,7 +33,7 @@ BranchPatterns = {
     "11111":0,
 }
 
-class BranchRegister:
+class FiveBitBranchRegister:
     def __init__(self):
        self.queue = [0,0,0,0,0]
        self.patterns = BranchPatterns

@@ -1,12 +1,12 @@
 import sys
-from BranchRegister import BranchRegister, BranchPatterns
+from FiveBitBranchRegister import FiveBitBranchRegister
 
 #prediction
 miss_predict = 0
 
 progress = 0
 
-branch_register = BranchRegister()
+branch_register = FiveBitBranchRegister()
 
 with open(sys.argv[1]) as f:
 	lines = f.readlines()
