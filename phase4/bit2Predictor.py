@@ -3,10 +3,10 @@ class Bit2Predictor:
         self.state = "WNT"
 
     def update(self,actual_value):
-	if (actual_value == 1):
-            self.taken();
-	else:
-	    self.notTaken();
+        if (actual_value == 1):
+            self.taken()
+        else:
+            self.notTaken()
 
     def taken(self):
         if (self.state == "SNT"):

@@ -60,6 +60,6 @@ with open(sys.argv[1]) as f:
 
 print("-------Parsing Complete-------")
 print ("(5,1) Full Addr Local Predictor Miss Rate: " + str(round(mp/progress * 100.0,2)) + "%")
-print ("(5,1) 5-bit Local Predictor Miss Rate: " + str(round(mp5/progress * 100.0,2)) + "%")
+print ("(5,1) 5-bit Addr Local Predictor Miss Rate: " + str(round(mp5/progress * 100.0,2)) + "%")
         
 
